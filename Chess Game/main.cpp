@@ -6,10 +6,26 @@
 //  Copyright © 2020 Ryan Barouki. All rights reserved.
 //
 
-#include <iostream>
+#include <SFML/Graphics.hpp>
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
-    return 0;
+int main() {
+    sf::RenderWindow window( sf::VideoMode(640, 480), "Chess");
+    
+    while( window.isOpen()){
+        sf::Event event;
+        
+        while (window.pollEvent(event)){
+            switch (event.type){
+                case sf::Event::Closed:
+                    window.close();
+                    
+                    break;
+            }
+        }
+        
+        window.clear();
+        // draw objects here
+        window.display();
+    }
+    
 }

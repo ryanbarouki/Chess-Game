@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		C55A8A6024CB3F1C0048D0EA /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C55A8A5F24CB3F1C0048D0EA /* main.cpp */; };
+		C55A8A7724CB42240048D0EA /* sfml-audio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C55A8A7124CB42240048D0EA /* sfml-audio.framework */; };
+		C55A8A7824CB42240048D0EA /* sfml-window.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C55A8A7224CB42240048D0EA /* sfml-window.framework */; };
+		C55A8A7924CB42240048D0EA /* sfml-graphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C55A8A7324CB42240048D0EA /* sfml-graphics.framework */; };
+		C55A8A7A24CB42240048D0EA /* sfml-system.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C55A8A7424CB42240048D0EA /* sfml-system.framework */; };
+		C55A8A7B24CB42240048D0EA /* SFML.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C55A8A7524CB42240048D0EA /* SFML.framework */; };
+		C55A8A7C24CB42240048D0EA /* sfml-network.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C55A8A7624CB42240048D0EA /* sfml-network.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +31,17 @@
 /* Begin PBXFileReference section */
 		C55A8A5C24CB3F1C0048D0EA /* Chess Game */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Chess Game"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C55A8A5F24CB3F1C0048D0EA /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		C55A8A6724CB40340048D0EA /* libsfml-graphics.2.5.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libsfml-graphics.2.5.1.dylib"; path = "ExtLib/SFML/lib/libsfml-graphics.2.5.1.dylib"; sourceTree = "<group>"; };
+		C55A8A6824CB40340048D0EA /* libsfml-window.2.5.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libsfml-window.2.5.1.dylib"; path = "ExtLib/SFML/lib/libsfml-window.2.5.1.dylib"; sourceTree = "<group>"; };
+		C55A8A6924CB40340048D0EA /* libsfml-audio.2.5.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libsfml-audio.2.5.1.dylib"; path = "ExtLib/SFML/lib/libsfml-audio.2.5.1.dylib"; sourceTree = "<group>"; };
+		C55A8A6A24CB40340048D0EA /* libsfml-network.2.5.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libsfml-network.2.5.1.dylib"; path = "ExtLib/SFML/lib/libsfml-network.2.5.1.dylib"; sourceTree = "<group>"; };
+		C55A8A6B24CB40340048D0EA /* libsfml-system.2.5.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libsfml-system.2.5.1.dylib"; path = "ExtLib/SFML/lib/libsfml-system.2.5.1.dylib"; sourceTree = "<group>"; };
+		C55A8A7124CB42240048D0EA /* sfml-audio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "sfml-audio.framework"; path = "../../../../Library/Frameworks/sfml-audio.framework"; sourceTree = "<group>"; };
+		C55A8A7224CB42240048D0EA /* sfml-window.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "sfml-window.framework"; path = "../../../../Library/Frameworks/sfml-window.framework"; sourceTree = "<group>"; };
+		C55A8A7324CB42240048D0EA /* sfml-graphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "sfml-graphics.framework"; path = "../../../../Library/Frameworks/sfml-graphics.framework"; sourceTree = "<group>"; };
+		C55A8A7424CB42240048D0EA /* sfml-system.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "sfml-system.framework"; path = "../../../../Library/Frameworks/sfml-system.framework"; sourceTree = "<group>"; };
+		C55A8A7524CB42240048D0EA /* SFML.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SFML.framework; path = ../../../../Library/Frameworks/SFML.framework; sourceTree = "<group>"; };
+		C55A8A7624CB42240048D0EA /* sfml-network.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "sfml-network.framework"; path = "../../../../Library/Frameworks/sfml-network.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +49,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C55A8A7724CB42240048D0EA /* sfml-audio.framework in Frameworks */,
+				C55A8A7824CB42240048D0EA /* sfml-window.framework in Frameworks */,
+				C55A8A7924CB42240048D0EA /* sfml-graphics.framework in Frameworks */,
+				C55A8A7A24CB42240048D0EA /* sfml-system.framework in Frameworks */,
+				C55A8A7B24CB42240048D0EA /* SFML.framework in Frameworks */,
+				C55A8A7C24CB42240048D0EA /* sfml-network.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +66,7 @@
 			children = (
 				C55A8A5E24CB3F1C0048D0EA /* Chess Game */,
 				C55A8A5D24CB3F1C0048D0EA /* Products */,
+				C55A8A6624CB40330048D0EA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,6 +84,24 @@
 				C55A8A5F24CB3F1C0048D0EA /* main.cpp */,
 			);
 			path = "Chess Game";
+			sourceTree = "<group>";
+		};
+		C55A8A6624CB40330048D0EA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C55A8A7124CB42240048D0EA /* sfml-audio.framework */,
+				C55A8A7324CB42240048D0EA /* sfml-graphics.framework */,
+				C55A8A7624CB42240048D0EA /* sfml-network.framework */,
+				C55A8A7424CB42240048D0EA /* sfml-system.framework */,
+				C55A8A7224CB42240048D0EA /* sfml-window.framework */,
+				C55A8A7524CB42240048D0EA /* SFML.framework */,
+				C55A8A6924CB40340048D0EA /* libsfml-audio.2.5.1.dylib */,
+				C55A8A6724CB40340048D0EA /* libsfml-graphics.2.5.1.dylib */,
+				C55A8A6A24CB40340048D0EA /* libsfml-network.2.5.1.dylib */,
+				C55A8A6B24CB40340048D0EA /* libsfml-system.2.5.1.dylib */,
+				C55A8A6824CB40340048D0EA /* libsfml-window.2.5.1.dylib */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -239,6 +281,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -247,6 +293,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(LOCAL_LIBRARY_DIR)/Frameworks",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
