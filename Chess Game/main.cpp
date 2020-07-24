@@ -22,7 +22,7 @@ int main() {
                     break;
             }
         }
-        
+        // Eleanor is here to commit
         window.clear();
         // draw objects here
         window.display();
