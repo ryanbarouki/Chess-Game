@@ -23,6 +23,7 @@ int main() {
             }
         }
         // Eleanor is here to commit
+        // Ryan added a comment
         window.clear();
         // draw objects here
         window.display();
