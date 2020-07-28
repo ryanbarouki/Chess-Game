@@ -14,6 +14,15 @@
 		C55A8A7A24CB42240048D0EA /* sfml-system.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C55A8A7424CB42240048D0EA /* sfml-system.framework */; };
 		C55A8A7B24CB42240048D0EA /* SFML.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C55A8A7524CB42240048D0EA /* SFML.framework */; };
 		C55A8A7C24CB42240048D0EA /* sfml-network.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C55A8A7624CB42240048D0EA /* sfml-network.framework */; };
+		C5B957A824D04F21005C7102 /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C5B957A624D04F21005C7102 /* Game.cpp */; };
+		C5B957AB24D04F69005C7102 /* Piece.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C5B957A924D04F69005C7102 /* Piece.cpp */; };
+		C5B957AE24D04F77005C7102 /* Pawn.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C5B957AC24D04F77005C7102 /* Pawn.cpp */; };
+		C5B957B124D04F86005C7102 /* Rook.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C5B957AF24D04F86005C7102 /* Rook.cpp */; };
+		C5B957B424D04F96005C7102 /* Knight.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C5B957B224D04F96005C7102 /* Knight.cpp */; };
+		C5B957B724D04FC3005C7102 /* Bishop.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C5B957B524D04FC3005C7102 /* Bishop.cpp */; };
+		C5B957BA24D04FE3005C7102 /* Queen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C5B957B824D04FE3005C7102 /* Queen.cpp */; };
+		C5B957BD24D04FED005C7102 /* King.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C5B957BB24D04FED005C7102 /* King.cpp */; };
+		C5B957C024D0557C005C7102 /* Board.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C5B957BE24D0557C005C7102 /* Board.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -42,6 +51,24 @@
 		C55A8A7424CB42240048D0EA /* sfml-system.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "sfml-system.framework"; path = "../../../../Library/Frameworks/sfml-system.framework"; sourceTree = "<group>"; };
 		C55A8A7524CB42240048D0EA /* SFML.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SFML.framework; path = ../../../../Library/Frameworks/SFML.framework; sourceTree = "<group>"; };
 		C55A8A7624CB42240048D0EA /* sfml-network.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "sfml-network.framework"; path = "../../../../Library/Frameworks/sfml-network.framework"; sourceTree = "<group>"; };
+		C5B957A624D04F21005C7102 /* Game.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Game.cpp; sourceTree = "<group>"; };
+		C5B957A724D04F21005C7102 /* Game.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Game.hpp; sourceTree = "<group>"; };
+		C5B957A924D04F69005C7102 /* Piece.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Piece.cpp; sourceTree = "<group>"; };
+		C5B957AA24D04F69005C7102 /* Piece.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Piece.hpp; sourceTree = "<group>"; };
+		C5B957AC24D04F77005C7102 /* Pawn.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Pawn.cpp; sourceTree = "<group>"; };
+		C5B957AD24D04F77005C7102 /* Pawn.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Pawn.hpp; sourceTree = "<group>"; };
+		C5B957AF24D04F86005C7102 /* Rook.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Rook.cpp; sourceTree = "<group>"; };
+		C5B957B024D04F86005C7102 /* Rook.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Rook.hpp; sourceTree = "<group>"; };
+		C5B957B224D04F96005C7102 /* Knight.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Knight.cpp; sourceTree = "<group>"; };
+		C5B957B324D04F96005C7102 /* Knight.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Knight.hpp; sourceTree = "<group>"; };
+		C5B957B524D04FC3005C7102 /* Bishop.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Bishop.cpp; sourceTree = "<group>"; };
+		C5B957B624D04FC3005C7102 /* Bishop.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Bishop.hpp; sourceTree = "<group>"; };
+		C5B957B824D04FE3005C7102 /* Queen.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Queen.cpp; sourceTree = "<group>"; };
+		C5B957B924D04FE3005C7102 /* Queen.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Queen.hpp; sourceTree = "<group>"; };
+		C5B957BB24D04FED005C7102 /* King.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = King.cpp; sourceTree = "<group>"; };
+		C5B957BC24D04FED005C7102 /* King.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = King.hpp; sourceTree = "<group>"; };
+		C5B957BE24D0557C005C7102 /* Board.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Board.cpp; sourceTree = "<group>"; };
+		C5B957BF24D0557C005C7102 /* Board.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Board.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +109,24 @@
 			isa = PBXGroup;
 			children = (
 				C55A8A5F24CB3F1C0048D0EA /* main.cpp */,
+				C5B957A624D04F21005C7102 /* Game.cpp */,
+				C5B957A724D04F21005C7102 /* Game.hpp */,
+				C5B957A924D04F69005C7102 /* Piece.cpp */,
+				C5B957AA24D04F69005C7102 /* Piece.hpp */,
+				C5B957AC24D04F77005C7102 /* Pawn.cpp */,
+				C5B957AD24D04F77005C7102 /* Pawn.hpp */,
+				C5B957AF24D04F86005C7102 /* Rook.cpp */,
+				C5B957B024D04F86005C7102 /* Rook.hpp */,
+				C5B957B224D04F96005C7102 /* Knight.cpp */,
+				C5B957B324D04F96005C7102 /* Knight.hpp */,
+				C5B957B524D04FC3005C7102 /* Bishop.cpp */,
+				C5B957B624D04FC3005C7102 /* Bishop.hpp */,
+				C5B957B824D04FE3005C7102 /* Queen.cpp */,
+				C5B957B924D04FE3005C7102 /* Queen.hpp */,
+				C5B957BB24D04FED005C7102 /* King.cpp */,
+				C5B957BC24D04FED005C7102 /* King.hpp */,
+				C5B957BE24D0557C005C7102 /* Board.cpp */,
+				C5B957BF24D0557C005C7102 /* Board.hpp */,
 			);
 			path = "Chess Game";
 			sourceTree = "<group>";
@@ -161,7 +206,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5B957BD24D04FED005C7102 /* King.cpp in Sources */,
+				C5B957BA24D04FE3005C7102 /* Queen.cpp in Sources */,
+				C5B957B724D04FC3005C7102 /* Bishop.cpp in Sources */,
+				C5B957AB24D04F69005C7102 /* Piece.cpp in Sources */,
 				C55A8A6024CB3F1C0048D0EA /* main.cpp in Sources */,
+				C5B957B424D04F96005C7102 /* Knight.cpp in Sources */,
+				C5B957A824D04F21005C7102 /* Game.cpp in Sources */,
+				C5B957AE24D04F77005C7102 /* Pawn.cpp in Sources */,
+				C5B957C024D0557C005C7102 /* Board.cpp in Sources */,
+				C5B957B124D04F86005C7102 /* Rook.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
