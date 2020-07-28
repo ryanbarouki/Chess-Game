@@ -19,5 +19,5 @@ public:
 private:
     sf::RenderWindow* window;
     Board* board;
-    
+    Pawn* pawn;
 };

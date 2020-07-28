@@ -4,6 +4,7 @@
 Game::Game(){
     window = new sf::RenderWindow (sf::VideoMode(1000, 1000), "Chess");
     board = new Board(sf::Vector2f(1000.0f, 1000.0f));
+    pawn = new Pawn(sf::Vector2f(10.0f,10.0f));
 }
 
 void Game::Loop(){
@@ -26,6 +27,7 @@ void Game::Loop(){
         
         // draw things here
         board->Draw(*window);
+        pawn->Draw(*window);
         
         window->display();
     }

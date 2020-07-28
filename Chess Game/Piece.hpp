@@ -4,13 +4,13 @@
 class Piece {
 public:
     //constructor
-    Piece(sf::Vector2f original_position);
+    Piece();
     
     void Draw(sf::RenderWindow &window);
     
     sf::RectangleShape GetShape();
     
-private:
+protected:
     sf::RectangleShape piece;
     sf::Texture pieceTexture;
 };
