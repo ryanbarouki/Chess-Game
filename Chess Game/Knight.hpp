@@ -1,14 +1,6 @@
-//
-//  Knight.hpp
-//  Chess Game
-//
-//  Created by Ryan Barouki on 28/07/2020.
-//  Copyright © 2020 Ryan Barouki. All rights reserved.
-//
+#pragma once
 
-#ifndef Knight_hpp
-#define Knight_hpp
 
-#include <stdio.h>
-
-#endif /* Knight_hpp */
+class Knight {
+    
+};

@@ -1,9 +1,9 @@
 #include "Game.hpp"
 
 int main() {
-    Game game;
+    Game chess;
     
-    game.Loop();
+    chess.Loop();
     return 0;
     
 }

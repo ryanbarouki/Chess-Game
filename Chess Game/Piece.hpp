@@ -1,14 +1,16 @@
-//
-//  Piece.hpp
-//  Chess Game
-//
-//  Created by Ryan Barouki on 28/07/2020.
-//  Copyright © 2020 Ryan Barouki. All rights reserved.
-//
+#pragma once
+#include <SFML/Graphics.hpp>
 
-#ifndef Piece_hpp
-#define Piece_hpp
-
-#include <stdio.h>
-
-#endif /* Piece_hpp */
+class Piece {
+public:
+    //constructor
+    Piece(sf::Vector2f original_position);
+    
+    void Draw(sf::RenderWindow &window);
+    
+    sf::RectangleShape GetShape();
+    
+private:
+    sf::RectangleShape piece;
+    sf::Texture pieceTexture;
+};

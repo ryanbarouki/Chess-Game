@@ -111,6 +111,8 @@
 				C55A8A5F24CB3F1C0048D0EA /* main.cpp */,
 				C5B957A624D04F21005C7102 /* Game.cpp */,
 				C5B957A724D04F21005C7102 /* Game.hpp */,
+				C5B957BE24D0557C005C7102 /* Board.cpp */,
+				C5B957BF24D0557C005C7102 /* Board.hpp */,
 				C5B957A924D04F69005C7102 /* Piece.cpp */,
 				C5B957AA24D04F69005C7102 /* Piece.hpp */,
 				C5B957AC24D04F77005C7102 /* Pawn.cpp */,
@@ -125,8 +127,6 @@
 				C5B957B924D04FE3005C7102 /* Queen.hpp */,
 				C5B957BB24D04FED005C7102 /* King.cpp */,
 				C5B957BC24D04FED005C7102 /* King.hpp */,
-				C5B957BE24D0557C005C7102 /* Board.cpp */,
-				C5B957BF24D0557C005C7102 /* Board.hpp */,
 			);
 			path = "Chess Game";
 			sourceTree = "<group>";
