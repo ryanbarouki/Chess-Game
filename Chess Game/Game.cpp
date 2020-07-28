@@ -1,6 +1,9 @@
 #include "Game.hpp"
 
 
+// rect_x: 0= , 1= , 2= , 3= , 4= , 5=pawn
+// rect_y: 0=white, 1=black
+
 Game::Game(){
     
     window = new sf::RenderWindow (sf::VideoMode(1000, 1000), "Chess");
