@@ -21,17 +21,23 @@ Game::Game(){
 
 void Game::Loop(){
     while(window->isOpen()){
-        
+        sf::Vector2i pos = sf::Mouse::getPosition(*window);
         sf::Event evnt;
         
         // allows us to close the window
         while (window->pollEvent(evnt)){
             // a switch statement for event types e.g close window, resize, input text etc.
-            switch (evnt.type){
+            if (evnt.type == evnt.Closed){
                     // close the window
-                case sf::Event::Closed:
                     window->close();
-                    break;
+            }
+            
+            if (evnt.type == sf::Event::MouseButtonPressed){
+                if (evnt.key.code == sf::Mouse::Left){
+                    for(int i = 0; i < 16; i++) {
+                        
+                    }
+                }
             }
             
         }
