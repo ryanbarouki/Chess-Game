@@ -21,7 +21,6 @@ public:
 private:
     sf::RenderWindow* window;
     Board* board;
-    Pawn *pawns[16];
-    
+    Pawn* pawns[16];
     
 };
