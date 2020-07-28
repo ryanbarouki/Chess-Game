@@ -9,6 +9,7 @@ void Piece::Draw(sf::RenderWindow &window){
     window.draw(piece);
 }
 
-sf::RectangleShape Piece::GetShape(){
+sf::Sprite Piece::GetShape(){
     return piece;
 }
+

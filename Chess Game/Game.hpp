@@ -16,8 +16,12 @@ public:
     
     void Loop();
     
+
+    
 private:
     sf::RenderWindow* window;
     Board* board;
-    Pawn* pawn;
+    Pawn *pawns[16];
+    
+    
 };

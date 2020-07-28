@@ -2,9 +2,21 @@
 
 
 Game::Game(){
+    
     window = new sf::RenderWindow (sf::VideoMode(1000, 1000), "Chess");
     board = new Board(sf::Vector2f(1000.0f, 1000.0f));
-    pawn = new Pawn(sf::Vector2f(10.0f,10.0f));
+    
+    // initialise all the pawns in a loop
+    for (int i = 0; i < 16; i++) {
+        if(i < 8){
+            // white pawns
+            pawns[i] = new Pawn(sf::Vector2f(125.0f*i-25.0f,120.0f),sf::Vector2f(0.7f,0.7f),5,0);
+        } else {
+            // black pawns
+            pawns[i] = new Pawn(sf::Vector2f(125.0f*(i-8)-25.0f,740.0f),sf::Vector2f(0.7f,0.7f),5,1);
+        }
+    }
+    
 }
 
 void Game::Loop(){
@@ -27,7 +39,10 @@ void Game::Loop(){
         
         // draw things here
         board->Draw(*window);
-        pawn->Draw(*window);
+        // draw all pawns in a loop
+        for(int i = 0; i < 16; i++) pawns[i]->Draw(*window);
+        
+        
         
         window->display();
     }

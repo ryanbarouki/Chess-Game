@@ -8,9 +8,10 @@ public:
     
     void Draw(sf::RenderWindow &window);
     
-    sf::RectangleShape GetShape();
+    sf::Sprite GetShape();
+
     
 protected:
-    sf::RectangleShape piece;
+    sf::Sprite piece;
     sf::Texture pieceTexture;
 };
