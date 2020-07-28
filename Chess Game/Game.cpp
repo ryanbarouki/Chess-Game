@@ -33,11 +33,7 @@ void Game::Loop(){
             }
             
             if (evnt.type == sf::Event::MouseButtonPressed){
-                if (evnt.key.code == sf::Mouse::Left){
-                    for(int i = 0; i < 16; i++) {
-                        
-                    }
-                }
+                
             }
             
         }
