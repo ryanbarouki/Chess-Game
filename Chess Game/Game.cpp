@@ -19,21 +19,17 @@ Game::Game(){
     //rooks
     for (int i=0; i<4; i++) {
         if (i>=2) {//white
-            rooks[i] = new Rook(sf::Vector2f(size*7*(i-2)+size/2,size*7+size/2),4,0);}
+            rooks[i] = new Rook(sf::Vector2f(size*7*(i-2)+size/2,size*7+size/2),4,0);
+            knights[i] = new Knight(sf::Vector2f(size*((5*(i-2))+1)+size/2,size*7+size/2),3,0);
+            bishops[i] = new Bishop(sf::Vector2f(size*((3*(i-2))+2)+size/2,size*7+size/2),2,0);
+        }
         else { //black
-            rooks[i] = new Rook(sf::Vector2f(size*7*i+size/2,size/2),4,1);}}
-    //knights
-    for (int i=0; i<4; i++) {
-        if (i>=2) {//white
-            knights[i] = new Knight(sf::Vector2f(size*((5*(i-2))+1)+size/2,size*7+size/2),3,0);}
-        else { //black
-            knights[i] = new Knight(sf::Vector2f(size*((5*i)+1)+size/2,size/2),3,1);}}
-    //bishops
-    for (int i=0; i<4; i++) {
-        if (i>=2) {//white
-            bishops[i] = new Bishop(sf::Vector2f(size*((3*(i-2))+2)+size/2,size*7+size/2),2,0);}
-        else { //black
-            bishops[i] = new Bishop(sf::Vector2f(size*((3*i)+2)+size/2,size/2),2,1);}}
+            rooks[i] = new Rook(sf::Vector2f(size*7*i+size/2,size/2),4,1);
+            knights[i] = new Knight(sf::Vector2f(size*((5*i)+1)+size/2,size/2),3,1);
+            bishops[i] = new Bishop(sf::Vector2f(size*((3*i)+2)+size/2,size/2),2,1);
+        }
+    }
+    
     //queens
     queens[1] = new Queen(sf::Vector2f(size*3+size/2,size*7+size/2),1,0);
     queens[0] = new Queen(sf::Vector2f(size*3+size/2,size/2),1,1);

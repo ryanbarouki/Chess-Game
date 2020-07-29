@@ -17,7 +17,6 @@ sf::Sprite Piece::GetShape(){
 
 void Piece::Move(sf::Event event, sf::RenderWindow &window){
     sf::Vector2i pos = sf::Mouse::getPosition(window);
-    //std::cout << pos.x << " " << pos.y << "\n";
     
     if (event.type == sf::Event::MouseButtonPressed) {
         
