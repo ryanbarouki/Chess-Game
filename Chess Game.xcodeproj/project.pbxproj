@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C545A81124D1A9BD000D65C6 /* images in Resources */ = {isa = PBXBuildFile; fileRef = C545A81024D1A9BD000D65C6 /* images */; };
 		C55A8A6024CB3F1C0048D0EA /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C55A8A5F24CB3F1C0048D0EA /* main.cpp */; };
 		C55A8A7724CB42240048D0EA /* sfml-audio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C55A8A7124CB42240048D0EA /* sfml-audio.framework */; };
 		C55A8A7824CB42240048D0EA /* sfml-window.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C55A8A7224CB42240048D0EA /* sfml-window.framework */; };
@@ -38,6 +39,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		C545A81024D1A9BD000D65C6 /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; name = images; path = "Chess Game/images"; sourceTree = "<group>"; };
 		C55A8A5C24CB3F1C0048D0EA /* Chess Game */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Chess Game"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C55A8A5F24CB3F1C0048D0EA /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		C55A8A6724CB40340048D0EA /* libsfml-graphics.2.5.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libsfml-graphics.2.5.1.dylib"; path = "ExtLib/SFML/lib/libsfml-graphics.2.5.1.dylib"; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 		C55A8A5324CB3F1C0048D0EA = {
 			isa = PBXGroup;
 			children = (
+				C545A81024D1A9BD000D65C6 /* images */,
 				C55A8A5E24CB3F1C0048D0EA /* Chess Game */,
 				C55A8A5D24CB3F1C0048D0EA /* Products */,
 				C55A8A6624CB40330048D0EA /* Frameworks */,
@@ -159,6 +162,7 @@
 				C55A8A5824CB3F1C0048D0EA /* Sources */,
 				C55A8A5924CB3F1C0048D0EA /* Frameworks */,
 				C55A8A5A24CB3F1C0048D0EA /* CopyFiles */,
+				C545A80F24D1A9A1000D65C6 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -200,6 +204,17 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C545A80F24D1A9A1000D65C6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C545A81124D1A9BD000D65C6 /* images in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C55A8A5824CB3F1C0048D0EA /* Sources */ = {
