@@ -9,6 +9,3 @@ Bishop::Bishop(sf::Vector2f original_position,sf::Vector2f scale, int rect_x, in
     piece.setTextureRect(sf::IntRect(rect_x*180,rect_y*180,180,180));
 }
  
-void Bishop::Move(sf::Event event){
-    
-}

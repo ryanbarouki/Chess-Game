@@ -1,22 +1,22 @@
 #include "Game.hpp"
-
-
+#define board_size 1000
+#define size 125
 // rect_x: 0= , 1= , 2= , 3= , 4= , 5=pawn
 // rect_y: 0=white, 1=black
 
 Game::Game(){
     
     window = new sf::RenderWindow (sf::VideoMode(1000, 1000), "Chess");
-    board = new Board(sf::Vector2f(1000.0f, 1000.0f));
+    board = new Board(sf::Vector2f(board_size, board_size));
     
     // initialise all the pawns in a loop
     for (int i = 0; i < 16; i++) {
         if(i < 8){
             // white pawns
-            pawns[i] = new Pawn(sf::Vector2f(125.0f*i-25.0f,120.0f),sf::Vector2f(0.7f,0.7f),5,0);
+            pawns[i] = new Pawn(sf::Vector2f(size*i,size),5,0);
         } else {
             // black pawns
-            pawns[i] = new Pawn(sf::Vector2f(125.0f*(i-8)-25.0f,740.0f),sf::Vector2f(0.7f,0.7f),5,1);
+            pawns[i] = new Pawn(sf::Vector2f(size*(i-8),size*6),5,1);
         }
     }
     

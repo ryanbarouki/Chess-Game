@@ -8,7 +8,3 @@ Rook::Rook(sf::Vector2f original_position,sf::Vector2f scale, int rect_x, int re
     piece.setTexture(pieceTexture);
     piece.setTextureRect(sf::IntRect(rect_x*180,rect_y*180,180,180));
 }
- 
-void Rook::Move(sf::Event event){
-    
-}

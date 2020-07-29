@@ -9,6 +9,3 @@ King::King(sf::Vector2f original_position,sf::Vector2f scale, int rect_x, int re
     piece.setTextureRect(sf::IntRect(rect_x*180,rect_y*180,180,180));
 }
  
-void King::Move(sf::Event event){
-    
-}

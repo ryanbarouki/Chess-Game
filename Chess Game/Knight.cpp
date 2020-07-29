@@ -9,6 +9,4 @@ Knight::Knight(sf::Vector2f original_position,sf::Vector2f scale, int rect_x, in
     piece.setTextureRect(sf::IntRect(rect_x*180,rect_y*180,180,180));
 }
  
-void Knight::Move(sf::Event event){
     
-}
