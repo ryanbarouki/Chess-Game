@@ -24,7 +24,6 @@ Game::Game(){
 
 void Game::Loop(){
     while(window->isOpen()){
-        sf::Vector2i pos = sf::Mouse::getPosition(*window);
         sf::Event evnt;
         
         // allows us to close the window
@@ -34,10 +33,7 @@ void Game::Loop(){
                     // close the window
                     window->close();
             }
-            
-            if (evnt.type == sf::Event::MouseButtonPressed){
-                
-            }
+            for (int i = 0; i < 16; i++) pawns[i]->Move(evnt, *window);
             
         }
         window->clear();
