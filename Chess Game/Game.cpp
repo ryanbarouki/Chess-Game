@@ -28,7 +28,7 @@ void Game::Loop(){
         
         // allows us to close the window
         while (window->pollEvent(evnt)){
-            // a switch statement for event types e.g close window, resize, input text etc.
+            // an if statement for event types e.g close window, resize, input text etc.
             if (evnt.type == evnt.Closed){
                     // close the window
                     window->close();
