@@ -3,7 +3,7 @@
 Board::Board(sf::Vector2f size){
     board.setSize(size);
     board.setPosition(0.0f, 0.0f);
-    boardTexture.loadFromFile("/Users/ryanbarouki/Documents/Coding Projects/Chess Game/Chess Game/images/board.png");
+    boardTexture.loadFromFile("/Users/ryanbarouki/Documents/Coding Projects/Chess Game/Chess Game/images/board2.png");
     // set the image as the texture of board by reference
     board.setTexture(&boardTexture);
 }
