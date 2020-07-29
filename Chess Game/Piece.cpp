@@ -3,7 +3,8 @@
 
 #define size 125
 Piece::Piece(){
-
+    pieceTexture.loadFromFile("/Users/ryanbarouki/Documents/Coding Projects/Chess Game/Chess Game/images/pieces_s.png");
+    piece.setTexture(pieceTexture);
 }
 
 void Piece::Draw(sf::RenderWindow &window){

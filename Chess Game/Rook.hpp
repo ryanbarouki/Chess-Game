@@ -3,6 +3,6 @@
 
 class Rook: public Piece {
 public:
-    Rook(sf::Vector2f original_position, sf::Vector2f scale, int rect_x, int rect_y);
+    Rook(sf::Vector2f original_position, int rect_x, int rect_y);
     
 };
