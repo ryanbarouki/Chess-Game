@@ -1,6 +1,7 @@
 #include "Piece.hpp"
-#define size 125
+#include <iostream>
 
+#define size 125
 Piece::Piece(){
 
 }
@@ -35,7 +36,7 @@ void Piece::Move(sf::Event event, sf::RenderWindow &window){
     if (event.type == sf::Event::MouseButtonReleased){
         if (event.key.code == sf::Mouse::Left) {
             isMove = false;
-            sf::Vector2f p = piece.getPosition() + sf::Vector2f(size/2,size/2);
+            sf::Vector2f p = piece.getPosition();
             //snaps to grid
             newPos = sf::Vector2f(size*int(p.x/size) + size/2, size*int(p.y/size) + size/2);
             piece.setPosition(newPos);
