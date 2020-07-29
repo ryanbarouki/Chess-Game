@@ -72,11 +72,15 @@ void Game::Loop(){
         board->Draw(*window);
         // DRAW PIECES
         for(int i = 0; i < 16; i++) pawns[i]->Draw(*window);
-        for(int i = 0; i < 4; i++) rooks[i]->Draw(*window);
-        for(int i = 0; i < 4; i++) knights[i]->Draw(*window);
-        for(int i = 0; i < 4; i++) bishops[i]->Draw(*window);
-        for(int i = 0; i < 2; i++) queens[i]->Draw(*window);
-        for(int i = 0; i < 2; i++) kings[i]->Draw(*window);
+        for(int i = 0; i < 4; i++) {
+            rooks[i]->Draw(*window);
+            knights[i]->Draw(*window);
+            bishops[i]->Draw(*window);
+        }
+        for(int i = 0; i < 2; i++) {
+            queens[i]->Draw(*window);
+            kings[i]->Draw(*window);
+        }
         
         
         

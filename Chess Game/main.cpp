@@ -2,7 +2,6 @@
 
 int main() {
     
-    system("dir");
     Game chess;
     
     chess.Loop();
