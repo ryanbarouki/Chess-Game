@@ -29,6 +29,18 @@ Game::Game(){
         else { //black
             knights[i] = new Knight(sf::Vector2f(size*((5*i)+1)+size/2,size/2),3,1);}}
     //bishops
+    for (int i=0; i<4; i++) {
+        if (i>=2) {//white
+            bishops[i] = new Bishop(sf::Vector2f(size*((3*(i-2))+2)+size/2,size*7+size/2),2,0);}
+        else { //black
+            bishops[i] = new Bishop(sf::Vector2f(size*((3*i)+2)+size/2,size/2),2,1);}}
+    //queens
+    queens[1] = new Queen(sf::Vector2f(size*3+size/2,size*7+size/2),1,0);
+    queens[0] = new Queen(sf::Vector2f(size*3+size/2,size/2),1,1);
+    
+    //kings
+    kings[1] = new King(sf::Vector2f(size*4+size/2,size*7+size/2),0,0);
+    kings[0] = new King(sf::Vector2f(size*4+size/2,size/2),0,1);
     
 }
 
@@ -45,9 +57,14 @@ void Game::Loop(){
             }
             // allows pieces to move (click n drag)
             for (int i = 0; i < 16; i++) pawns[i]->Move(evnt, *window);
-            for (int i = 0; i < 4; i++) rooks[i]->Move(evnt, *window);
-            for (int i = 0; i < 4; i++) knights[i]->Move(evnt, *window);
-            
+            for (int i = 0; i < 4; i++) {
+                rooks[i]->Move(evnt, *window);
+                knights[i]->Move(evnt, *window);
+                bishops[i]->Move(evnt, *window);}
+            for (int i=0; i<2; i++) {
+                queens[i]->Move(evnt, *window);
+                kings[i]->Move(evnt, *window);
+                }
         }
         window->clear();
         
@@ -57,6 +74,9 @@ void Game::Loop(){
         for(int i = 0; i < 16; i++) pawns[i]->Draw(*window);
         for(int i = 0; i < 4; i++) rooks[i]->Draw(*window);
         for(int i = 0; i < 4; i++) knights[i]->Draw(*window);
+        for(int i = 0; i < 4; i++) bishops[i]->Draw(*window);
+        for(int i = 0; i < 2; i++) queens[i]->Draw(*window);
+        for(int i = 0; i < 2; i++) kings[i]->Draw(*window);
         
         
         
