@@ -19,8 +19,14 @@ public:
 
     
 private:
+    //declare all pointers to pieces etc
     sf::RenderWindow* window;
     Board* board;
     Pawn* pawns[16];
+    Rook* rooks[4];
+    Knight* knights[4];
+    Bishop* bishops[4];
+    Queen* queens[2];
+    King* kings[2];
     
 };

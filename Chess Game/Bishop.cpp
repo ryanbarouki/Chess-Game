@@ -1,8 +1,9 @@
 #include "Bishop.hpp"
+#define size 125
 
 Bishop::Bishop(sf::Vector2f original_position, int rect_x, int rect_y){
     Piece();
     piece.setPosition(original_position);
-    piece.setTextureRect(sf::IntRect(rect_x*180,rect_y*180,180,180));
+    piece.setTextureRect(sf::IntRect(rect_x*size,rect_y*size,size,size));
 }
  
