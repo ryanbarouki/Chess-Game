@@ -1,5 +1,6 @@
 #pragma once
 #include <SFML/Graphics.hpp>
+#include "Board.hpp"
 
 class Piece {
 public:
@@ -12,9 +13,13 @@ public:
 
     void Move(sf::Event event, sf::RenderWindow &window);
     
+    bool wouldMoveCauseCheck(int finalrow, int finalcol, Board board);
+    
 protected:
     sf::Sprite piece;
     sf::Texture pieceTexture;
+    int location[2];
+    char colour;
     
 private:
     bool isMove = false;

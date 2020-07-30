@@ -13,7 +13,9 @@ Game::Game(){
     //pawns
     for (int i = 0; i < 16; i++) {
         if(i >= 8){ //white
-            pawns[i] = new Pawn(sf::Vector2f(size*(i-8)+size/2,size*6 + size/2),5,0);}
+            pawns[i] = new Pawn(sf::Vector2f(size*(i-8)+size/2,size*6 + size/2),5,0);
+            //board->addPiece(pawns[i]);
+        }
         else { // black
             pawns[i] = new Pawn(sf::Vector2f(size*i+size/2,size+size/2),5,1);}}
     //rooks
@@ -37,6 +39,7 @@ Game::Game(){
     //kings
     kings[1] = new King(sf::Vector2f(size*4+size/2,size*7+size/2),0,0);
     kings[0] = new King(sf::Vector2f(size*4+size/2,size/2),0,1);
+    
     
 }
 
