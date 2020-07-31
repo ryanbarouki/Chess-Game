@@ -19,6 +19,11 @@ sf::RectangleShape Board::GetShape(){
     return board;
 }
 
+
+Piece Board::pieceAt(int row, int col){
+    
+    return *board_array[row][col];
+}
    
 void Board::addPiece(Piece *piece){
     // use the fact that a Piece knows its location in order to figure out where it will go.
@@ -28,10 +33,11 @@ void Board::addPiece(Piece *piece){
     int row = int((y - size/2)/size);
     int col = int((x - size/2)/size);
     
-    board_array[row][col] =  new Piece;
+    board_array[row][col] =  new Piece; // this is needed for heapy stacky reasons
     *board_array[row][col] = *piece;
 }
    
 void Board::removePiece(int row, int col){
     *board_array[row][col] = {}; // makes it null basically
 }
+

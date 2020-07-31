@@ -51,7 +51,7 @@ Game::Game(){
     kings[1] = new King(sf::Vector2f(size*4+size/2,size*7+size/2),0,0);
     kings[0] = new King(sf::Vector2f(size*4+size/2,size/2),0,1);
     board->addPiece(kings[0]);
-    board->addPiece(queens[1]);
+    board->addPiece(kings[1]);
     
 }
 
@@ -67,31 +67,23 @@ void Game::Loop(){
                     window->close();
             }
             // allows pieces to move (click n drag)
-            for (int i = 0; i < 16; i++) pawns[i]->Move(evnt, *window);
-            for (int i = 0; i < 4; i++) {
-                rooks[i]->Move(evnt, *window);
-                knights[i]->Move(evnt, *window);
-                bishops[i]->Move(evnt, *window);}
-            for (int i=0; i<2; i++) {
-                queens[i]->Move(evnt, *window);
-                kings[i]->Move(evnt, *window);
-                }
+            
+            for( int i = 0; i < 8; i++)
+                for( int j = 0; j < 8; j++)
+                    if (board->board_array[i][j] != nullptr) board->board_array[i][j]->Move(evnt, *window);
+            
         }
         window->clear();
         
         // DRAW THINGS HERE
         board->Draw(*window);
+        
+        
         // DRAW PIECES
-        for(int i = 0; i < 16; i++) pawns[i]->Draw(*window);
-        for(int i = 0; i < 4; i++) {
-            rooks[i]->Draw(*window);
-            knights[i]->Draw(*window);
-            bishops[i]->Draw(*window);
-        }
-        for(int i = 0; i < 2; i++) {
-            queens[i]->Draw(*window);
-            kings[i]->Draw(*window);
-        }
+        for( int i = 0; i < 8; i++)
+        for( int j = 0; j < 8; j++)
+            if (board->board_array[i][j] != nullptr) board->board_array[i][j]->Draw(*window);
+        
         
         
         
