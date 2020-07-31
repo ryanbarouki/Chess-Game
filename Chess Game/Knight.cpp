@@ -6,4 +6,8 @@ Knight::Knight(sf::Vector2f original_position, int rect_x, int rect_y, char clr)
     piece.setTextureRect(sf::IntRect(rect_x*size,rect_y*size,size,size));
 }
  
-    
+bool Knight::canMoveTo(int row, int col, Board &board){
+    bool valid = true;
+    // validation code here
+    return valid;
+}
