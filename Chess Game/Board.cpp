@@ -33,11 +33,17 @@ void Board::addPiece(Piece *piece){
     int row = int((y - size/2)/size);
     int col = int((x - size/2)/size);
     
-    board_array[row][col] =  new Piece; // this is needed for heapy stacky reasons
+    board_array[row][col] =  new Piece(piece->getColour()); // this is needed for heapy stacky reasons
     *board_array[row][col] = *piece;
 }
    
 void Board::removePiece(int row, int col){
-    *board_array[row][col] = {}; // makes it null basically
+    delete board_array[row][col]; //clears the memory
+    board_array[row][col] = nullptr; // makes it null basically
 }
+
+Piece* Board::getPiece(int row, int col){
+    return board_array[row][col];
+}
+
 

@@ -5,7 +5,7 @@
 class Piece {
 public:
     //constructor
-    Piece();
+    Piece(char clr);
     
     void Draw(sf::RenderWindow &window);
     
@@ -14,6 +14,8 @@ public:
     void Move(sf::Event event, sf::RenderWindow &window);
     
     bool wouldMoveCauseCheck(int finalrow, int finalcol, Board board);
+    
+    char getColour();
     
 protected:
     sf::Sprite piece;

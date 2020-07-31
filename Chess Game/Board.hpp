@@ -19,10 +19,20 @@ public:
     
     void removePiece(int row, int col); // removes a piece from the board
     
-    Piece *board_array[8][8]; // this will store an array of pieces i.e. the actual chess board
+    Piece* getPiece(int row, int col);
+    
 private:
     
     sf::RectangleShape board;
     sf::Texture boardTexture;
+    Piece *board_array[8][8] = {nullptr, nullptr, nullptr, nullptr, nullptr, nullptr, nullptr, nullptr,
+                                nullptr, nullptr, nullptr, nullptr, nullptr, nullptr, nullptr, nullptr,
+                                nullptr, nullptr, nullptr, nullptr, nullptr, nullptr, nullptr, nullptr,
+                                nullptr, nullptr, nullptr, nullptr, nullptr, nullptr, nullptr, nullptr,
+                                nullptr, nullptr, nullptr, nullptr, nullptr, nullptr, nullptr, nullptr,
+                                nullptr, nullptr, nullptr, nullptr, nullptr, nullptr, nullptr, nullptr,
+                                nullptr, nullptr, nullptr, nullptr, nullptr, nullptr, nullptr, nullptr,
+                                nullptr, nullptr, nullptr, nullptr, nullptr, nullptr, nullptr, nullptr};
+    // this will store an array of pieces i.e. the actual chess board
     
 };

@@ -2,9 +2,10 @@
 #include <iostream>
 
 #define size 125
-Piece::Piece(){
+Piece::Piece(char clr){
     pieceTexture.loadFromFile("images/pieces_s.png");
     piece.setTexture(pieceTexture);
+    colour = clr;
 }
 
 void Piece::Draw(sf::RenderWindow &window){
@@ -46,3 +47,6 @@ void Piece::Move(sf::Event event, sf::RenderWindow &window){
     if(isMove) piece.setPosition(pos.x-dx,pos.y-dy);
 }
 
+char Piece::getColour(){
+    return colour;
+}
