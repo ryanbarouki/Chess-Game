@@ -28,6 +28,7 @@ void Board::addPiece(Piece *piece){
     int row = int((y - size/2)/size);
     int col = int((x - size/2)/size);
     
+    board_array[row][col] =  new Piece;
     *board_array[row][col] = *piece;
 }
    
