@@ -93,6 +93,9 @@ void Game::Loop(){
                     newPos = sf::Vector2f(size*int(p.x/size) + size/2, size*int(p.y/size) + size/2);
                     if(board->getPiece(I, J)->canMoveTo(I,J,*board)){
                         board->getPiece(I, J)->piece.setPosition(newPos);
+                        int new_row = int(newPos.y/size);
+                        int new_col = int(newPos.x/size);
+                        board->updateBoard(I, J, new_row, new_col);
                     } else {
                         board->getPiece(I, J)->piece.setPosition(oldPos);
                     }
@@ -111,7 +114,9 @@ void Game::Loop(){
         // DRAW PIECES
         for( int i = 0; i < 8; i++)
             for( int j = 0; j < 8; j++)
-                if (board->getPiece(i, j) != nullptr) board->getPiece(i, j)->Draw(*window);
+                if (board->getPiece(i, j) != nullptr) {
+                    board->getPiece(i, j)->Draw(*window);
+                }
         window->display();
     }
     

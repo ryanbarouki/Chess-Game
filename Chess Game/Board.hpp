@@ -21,6 +21,7 @@ public:
     
     Piece* getPiece(int row, int col);
     
+    void updateBoard(int old_row, int old_col, int new_row, int new_col);
 private:
     
     sf::RectangleShape board;

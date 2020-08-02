@@ -9,17 +9,17 @@ Knight::Knight(sf::Vector2f original_position, int rect_x, int rect_y, char clr)
 bool Knight::canMoveTo(int row, int col, Board &board){
     bool valid = false;
     // validation code
-    int col_orig = int((piece.getPosition().x-(size/2))/size);
-    int row_orig = int((piece.getPosition().y-(size/2))/size);
-    if (abs(row-row_orig)==1 && abs(col-col_orig)==2 && board.getPiece(row,col)==nullptr) {
+    int col_final = int((piece.getPosition().x)/size);
+    int row_final = int((piece.getPosition().y)/size);
+    if ((abs(row-row_final)==1 && abs(col-col_final)==2) || (abs(row-row_final)==2 && abs(col-col_final)==1)) {
+        valid = true;}
+    /*} else if (abs(row-row_final)==2 && abs(col-col_final)==1 && board.getPiece(row_final,col_final)==nullptr) {
         valid = true;
-    } else if (abs(row-row_orig)==2 && abs(col-col_orig)==1 && board.getPiece(row,col)==nullptr) {
-        valid = true;
-    } else if (abs(row-row_orig)==1 && abs(col-col_orig)==2 && board.getPiece(row,col)!=nullptr) {
-        if (board.getPiece(row,col)->getColour()!= getColour()) {
+    } else if (abs(row-row_final)==1 && abs(col-col_final)==2 && board.getPiece(row_final,col_final)!=nullptr) {
+        if (board.getPiece(row_final,col_final)->getColour()!= getColour()) {
             valid = true;
         }
-    }
+    } */
     return valid;
 }
 

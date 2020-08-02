@@ -20,6 +20,7 @@ public:
     }
     
     sf::Sprite piece;
+    
 protected:
     sf::Texture pieceTexture;
     int location[2];

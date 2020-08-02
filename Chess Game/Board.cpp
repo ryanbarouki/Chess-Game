@@ -46,4 +46,9 @@ Piece* Board::getPiece(int row, int col){
     return board_array[row][col];
 }
 
-
+void Board::updateBoard(int old_row, int old_col, int new_row, int new_col){
+    
+    board_array[new_row][new_col] = board_array[old_row][old_col];
+    //delete board_array[old_row][old_col];
+    board_array[old_row][old_col] = nullptr;
+}
