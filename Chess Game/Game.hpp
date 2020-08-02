@@ -32,7 +32,7 @@ private:
     bool isMove = false;
     double dx = 0, dy = 0;
     sf::Vector2f newPos, oldPos;
-    int I = 1;
-    int J = 1;
+    int I = -1;
+    int J = -1;
     
 };

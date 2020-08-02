@@ -67,9 +67,6 @@ void Game::Loop(){
                     window->close();
             }
             // allows pieces to move (click n drag)
-            
-    
-                //board->getPiece(i, j)->Move(evnt, *window, *board);
                 
             if (evnt.type == sf::Event::MouseButtonPressed) {
                 if (evnt.key.code == sf::Mouse::Left){
@@ -89,6 +86,7 @@ void Game::Loop(){
             
             if (evnt.type == sf::Event::MouseButtonReleased){
                 if (evnt.key.code == sf::Mouse::Left) {
+                    if (I != -1 && J != -1){ // needed to fix the bug
                     isMove = false;
                     sf::Vector2f p = board->getPiece(I, J)->piece.getPosition();
                     //snaps to grid
@@ -97,6 +95,7 @@ void Game::Loop(){
                         board->getPiece(I, J)->piece.setPosition(newPos);
                     } else {
                         board->getPiece(I, J)->piece.setPosition(oldPos);
+                    }
                     }
                 }
             }
