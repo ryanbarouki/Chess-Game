@@ -1,4 +1,5 @@
 #include "Game.hpp"
+#include <iostream>
 #define board_size 1132
 #define size 125
 // rect_x: 0= , 1= , 2= , 3=knight , 4=rook , 5=pawn
@@ -57,7 +58,7 @@ Game::Game(){
 void Game::Loop(){
     while(window->isOpen()){
         sf::Event evnt;
-        
+        sf::Vector2i pos = sf::Mouse::getPosition(*window);
         // allows us to close the window
         while (window->pollEvent(evnt)){
             // an if statement for event types e.g close window, resize, input text etc.
@@ -67,11 +68,42 @@ void Game::Loop(){
             }
             // allows pieces to move (click n drag)
             
-            for( int i = 0; i < 8; i++)
-                for( int j = 0; j < 8; j++)
-                    if (board->getPiece(i, j) != nullptr) board->getPiece(i, j)->Move(evnt, *window);
+    
+                //board->getPiece(i, j)->Move(evnt, *window, *board);
+                
+            if (evnt.type == sf::Event::MouseButtonPressed) {
+                if (evnt.key.code == sf::Mouse::Left){
+                    for( int i = 0; i < 8; i++)
+                        for( int j = 0; j < 8; j++)
+                            if (board->getPiece(i, j) != nullptr)
+                                if (board->getPiece(i, j)->piece.getGlobalBounds().contains(pos.x,pos.y)){
+                                    isMove = true;
+                                    I = i;
+                                    J = j;
+                                    dx = pos.x - board->getPiece(i, j)->piece.getPosition().x;
+                                    dy = pos.y - board->getPiece(i, j)->piece.getPosition().y;
+                                    oldPos = board->getPiece(i, j)->piece.getPosition();
+                                }
+                }
+            }
             
+            if (evnt.type == sf::Event::MouseButtonReleased){
+                if (evnt.key.code == sf::Mouse::Left) {
+                    isMove = false;
+                    sf::Vector2f p = board->getPiece(I, J)->piece.getPosition();
+                    //snaps to grid
+                    newPos = sf::Vector2f(size*int(p.x/size) + size/2, size*int(p.y/size) + size/2);
+                    if(board->getPiece(I, J)->canMoveTo(I,J,*board)){
+                        board->getPiece(I, J)->piece.setPosition(newPos);
+                    } else {
+                        board->getPiece(I, J)->piece.setPosition(oldPos);
+                    }
+                }
+            }
+            //updates the position continuously when dragging a piece
+            if(isMove) board->getPiece(I, J)->piece.setPosition(pos.x-dx,pos.y-dy);
         }
+        
         window->clear();
         
         // DRAW THINGS HERE
@@ -81,7 +113,6 @@ void Game::Loop(){
         for( int i = 0; i < 8; i++)
             for( int j = 0; j < 8; j++)
                 if (board->getPiece(i, j) != nullptr) board->getPiece(i, j)->Draw(*window);
-        
         window->display();
     }
     

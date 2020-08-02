@@ -34,7 +34,7 @@ void Board::addPiece(Piece *piece){
     int col = int((x - size/2)/size);
     
     board_array[row][col] =  new Piece(piece->getColour()); // this is needed for heapy stacky reasons
-    *board_array[row][col] = *piece;
+    board_array[row][col] = piece;
 }
    
 void Board::removePiece(int row, int col){

@@ -10,21 +10,19 @@ public:
     void Draw(sf::RenderWindow &window);
     
     sf::Sprite GetShape();
-
-    void Move(sf::Event event, sf::RenderWindow &window);
     
     bool wouldMoveCauseCheck(int finalrow, int finalcol, Board board);
     
     char getColour();
     
-protected:
+    virtual bool canMoveTo(int row, int col, Board &board){
+        return true;
+    }
+    
     sf::Sprite piece;
+protected:
     sf::Texture pieceTexture;
     int location[2];
     char colour;
-    
-private:
-    bool isMove = false;
-    double dx = 0, dy = 0;
-    sf::Vector2f oldPos, newPos;
+
 };

@@ -29,4 +29,9 @@ private:
     Queen* queens[2];
     King* kings[2];
     
+    bool isMove = false;
+    double dx = 0, dy = 0;
+    sf::Vector2f newPos, oldPos;
+    int I,J;
+    
 };
