@@ -10,7 +10,7 @@ Pawn::Pawn(sf::Vector2f original_position, int rect_x, int rect_y, char clr): Pi
 }
 
 bool Pawn::canMoveTo(int row, int col, Board &board){
-    bool valid = true;
+    bool valid = false;
     // validation code here
     return valid;
 }
