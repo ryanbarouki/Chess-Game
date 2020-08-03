@@ -15,10 +15,6 @@ public:
     
     Piece pieceAt(int row, int col); // returns the chess piece at that position
     
-    void addPiece(Piece *piece); // adds a piece to the board
-    
-    void removePiece(int row, int col); // removes a piece from the board
-    
     Piece* getPiece(int row, int col);
     
     void updateBoard(int old_row, int old_col, int new_row, int new_col);
