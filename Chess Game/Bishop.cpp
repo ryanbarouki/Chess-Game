@@ -17,9 +17,10 @@ bool Bishop::canMoveTo(int row, int col, Board &board){
         if(board.getPiece(row_final, col_final) == nullptr || board.getPiece(row_final,col_final)->getColour()!= getColour()){
             int col_min = std::min(col, col_final);
             int col_max = std::max(col, col_final);
-            valid = true;
             int row_min = std::min(row, row_final);
             int row_max = std::max(row, row_final);
+            valid = true;
+            
             if((row_final == row_max && col_final == col_max) || (row_final == row_min && col_final == col_min)){
                 for (int c = col_min+1; c < col_max; c++){
                         int r = (c - col_min) + row_min;
