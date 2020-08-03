@@ -11,7 +11,7 @@ public:
     
     sf::Sprite GetShape();
     
-    bool wouldMoveCauseCheck(int finalrow, int finalcol, Board board);
+    bool wouldMoveCauseCheck(int finalrow, int finalcol, Board &board);
     
     char getColour();
     
