@@ -14,10 +14,8 @@ bool Knight::canMoveTo(int row, int col, Board &board){
     if ((abs(row-row_final)==1 && abs(col-col_final)==2) || (abs(row-row_final)==2 && abs(col-col_final)==1)) {
         if(board.getPiece(row_final,col_final) == nullptr){
             valid = true;
-        } else {
-            if(board.getPiece(row_final,col_final)->getColour()!= getColour()){
+        } else if (board.getPiece(row_final,col_final)->getColour()!= getColour()){
                 valid = true;
-            }
         }
     }
     return valid;
