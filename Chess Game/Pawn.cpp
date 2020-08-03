@@ -13,6 +13,7 @@ bool Pawn::canMoveTo(int row, int col, Board &board){
     bool valid = false;
     int col_final = int((piece.getPosition().x)/size);
     int row_final = int((piece.getPosition().y)/size);
+    //woop
     
     // validation code here
     if(getColour() == 'w'){
