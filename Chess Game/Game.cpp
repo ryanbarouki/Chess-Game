@@ -50,13 +50,21 @@ void Game::Loop(){
                                 //snaps to grid
                                 newPos = sf::Vector2f(size*int(p.x/size) + size/2, size*int(p.y/size) + size/2);
                                 if(board->getPiece(I, J)->canMoveTo(I,J,*board) && newPos != oldPos){
+                                    //takes care of who's turn it is.
+                                    if(board->getPiece(I, J)->getColour() == 'w' && turn % 2 == 0){
+                                        turn++;
                                         board->getPiece(I, J)->piece.setPosition(newPos);
                                         int new_row = int(newPos.y/size);
                                         int new_col = int(newPos.x/size);
                                         board->updateBoard(I, J, new_row, new_col);
-                                } else {
-                                        board->getPiece(I, J)->piece.setPosition(oldPos);
-                                }
+                                    } else if (board->getPiece(I, J)->getColour() == 'b' && turn % 2 == 1){
+                                        turn++;
+                                        board->getPiece(I, J)->piece.setPosition(newPos);
+                                        int new_row = int(newPos.y/size);
+                                        int new_col = int(newPos.x/size);
+                                        board->updateBoard(I, J, new_row, new_col);
+                                    } else board->getPiece(I, J)->piece.setPosition(oldPos);
+                                } else board->getPiece(I, J)->piece.setPosition(oldPos);
                         }
                     }
                 }

@@ -16,7 +16,7 @@ private:
     //declare all pointers to pieces etc
     sf::RenderWindow* window;
     Board* board;
-
+    int turn = 0;
     bool isMove = false;
     double dx = 0, dy = 0;
     sf::Vector2f newPos, oldPos;
