@@ -87,18 +87,20 @@ void Game::Loop(){
             if (evnt.type == sf::Event::MouseButtonReleased){
                 if (evnt.key.code == sf::Mouse::Left) {
                     if (I != -1 && J != -1){ // needed to fix the bug
-                    isMove = false;
-                    sf::Vector2f p = board->getPiece(I, J)->piece.getPosition();
-                    //snaps to grid
-                    newPos = sf::Vector2f(size*int(p.x/size) + size/2, size*int(p.y/size) + size/2);
-                    if(board->getPiece(I, J)->canMoveTo(I,J,*board)){
-                        board->getPiece(I, J)->piece.setPosition(newPos);
-                        int new_row = int(newPos.y/size);
-                        int new_col = int(newPos.x/size);
-                        board->updateBoard(I, J, new_row, new_col);
-                    } else {
-                        board->getPiece(I, J)->piece.setPosition(oldPos);
-                    }
+                        if (board->getPiece(I, J) != nullptr){
+                                isMove = false;
+                                sf::Vector2f p = board->getPiece(I, J)->piece.getPosition();
+                                //snaps to grid
+                                newPos = sf::Vector2f(size*int(p.x/size) + size/2, size*int(p.y/size) + size/2);
+                                if(board->getPiece(I, J)->canMoveTo(I,J,*board) && newPos != oldPos){
+                                        board->getPiece(I, J)->piece.setPosition(newPos);
+                                        int new_row = int(newPos.y/size);
+                                        int new_col = int(newPos.x/size);
+                                        board->updateBoard(I, J, new_row, new_col);
+                                } else {
+                                        board->getPiece(I, J)->piece.setPosition(oldPos);
+                                }
+                        }
                     }
                 }
             }
