@@ -19,8 +19,8 @@ bool Bishop::canMoveTo(int row, int col, Board &board){
             int col_max = std::max(col, col_final);
             int row_min = std::min(row, row_final);
             int row_max = std::max(row, row_final);
+
             valid = true;
-            
             if((row_final == row_max && col_final == col_max) || (row_final == row_min && col_final == col_min)){
                 for (int c = col_min+1; c < col_max; c++){
                         int r = (c - col_min) + row_min;
