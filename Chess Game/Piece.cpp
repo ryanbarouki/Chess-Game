@@ -19,3 +19,9 @@ sf::Sprite Piece::GetShape(){
 char Piece::getColour(){
     return colour;
 }
+
+bool Piece::wouldMoveCauseCheck(int finalrow, int finalcol, Board &board){
+    bool causesCheck = false;
+    //check if any piece of the opposite colour can move to the square of the king.
+    return causesCheck;
+}
