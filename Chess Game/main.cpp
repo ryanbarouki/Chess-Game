@@ -1,6 +1,5 @@
 #include "Game.hpp"
 
-// TODO: Code wouldMoveCauseCheck method in Piece class
 // TODO: Pawn promotion
 // TODO: isInCheck, isInCheckMate, isInStalemate methods
 // TODO: Undo moves
