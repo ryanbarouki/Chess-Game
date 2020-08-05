@@ -4,13 +4,12 @@
 Rook::Rook(sf::Vector2f original_position, int rect_x, int rect_y, char clr): Piece(clr){
     piece.setPosition(original_position);
     piece.setTextureRect(sf::IntRect(rect_x*size,rect_y*size,size,size));
+    type = "rook";
 }
 
-bool Rook::canMoveTo(int row, int col, Board &board){
+bool Rook::canMoveTo(int row, int col, int row_final, int col_final, Board &board){
     bool valid = false;
     // validation code
-    int col_final = int((piece.getPosition().x)/size);
-    int row_final = int((piece.getPosition().y)/size);
     
     if (row_final == row or col_final == col){
         if (board.getPiece(row_final,col_final) == nullptr || board.getPiece(row_final,col_final)->getColour()!= getColour()) {

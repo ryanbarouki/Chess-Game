@@ -5,13 +5,12 @@ Queen::Queen(sf::Vector2f original_position, int rect_x, int rect_y, char clr): 
     
     piece.setPosition(original_position);
     piece.setTextureRect(sf::IntRect(rect_x*size,rect_y*size,size,size));
+    type = "queen";
 }
  
-bool Queen::canMoveTo(int row, int col, Board &board){
+bool Queen::canMoveTo(int row, int col, int row_final, int col_final, Board &board){
     bool valid = false;
     // validation code here
-    int col_final = int((piece.getPosition().x)/size);
-    int row_final = int((piece.getPosition().y)/size);
     if ((col==col_final) || (row==row_final) || (abs(row-row_final)==abs(col-col_final))) {
         if (board.getPiece(row_final,col_final) == nullptr || board.getPiece(row_final,col_final)->getColour()!= getColour()) {
             int col_min = std::min(col, col_final);

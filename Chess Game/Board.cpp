@@ -59,9 +59,18 @@ Piece* Board::getPiece(int row, int col){
     return board_array[row][col];
 }
 
+void Board::addPiece(Piece *piece, int row, int col){
+    board_array[row][col] = piece;
+}
+
 void Board::updateBoard(int old_row, int old_col, int new_row, int new_col){
+    // updates and stores the position of the kings if they are moved
+    // useful for wouldMoveCauseCheck
+    if (getPiece(old_row, old_col)->getColour() == 'w' && getPiece(old_row, old_col)->type == "king"){
+        white_king_position = {new_row, new_col};
+    } else if (getPiece(old_row, old_col)->getColour() == 'b' && getPiece(old_row, old_col)->type == "king") { black_king_position = {new_row, new_col};
+    }
     
     board_array[new_row][new_col] = board_array[old_row][old_col];
-    //delete board_array[old_row][old_col];
     board_array[old_row][old_col] = nullptr;
 }

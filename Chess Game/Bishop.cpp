@@ -5,13 +5,12 @@ Bishop::Bishop(sf::Vector2f original_position, int rect_x, int rect_y, char clr)
 
     piece.setPosition(original_position);
     piece.setTextureRect(sf::IntRect(rect_x*size,rect_y*size,size,size));
+    type = "bishop";
 }
  
-bool Bishop::canMoveTo(int row, int col, Board &board){
+bool Bishop::canMoveTo(int row, int col, int row_final, int col_final, Board &board){
     bool valid = false;
     // validation code
-    int col_final = int((piece.getPosition().x)/size);
-    int row_final = int((piece.getPosition().y)/size);
     
     if(abs(col_final - col) == abs(row_final - row)){
         if(board.getPiece(row_final, col_final) == nullptr || board.getPiece(row_final,col_final)->getColour()!= getColour()){

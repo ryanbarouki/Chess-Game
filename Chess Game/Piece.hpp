@@ -11,16 +11,17 @@ public:
     
     sf::Sprite GetShape();
     
-    bool wouldMoveCauseCheck(int finalrow, int finalcol, Board &board);
+    bool wouldMoveCauseCheck(int origrow, int origcol, int finalrow, int finalcol, Board board);
     
     char getColour();
     
-    virtual bool canMoveTo(int row, int col, Board &board){
+    virtual bool canMoveTo(int row, int col, int row_final, int col_final, Board &board){
         return true;
     }
     
     sf::Sprite piece;
     
+    std::string type;
 protected:
     sf::Texture pieceTexture;
     int location[2];

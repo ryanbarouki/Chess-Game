@@ -17,7 +17,12 @@ public:
     
     Piece* getPiece(int row, int col);
     
+    void addPiece(Piece *piece, int row, int col);
+    
     void updateBoard(int old_row, int old_col, int new_row, int new_col);
+    
+    sf::Vector2i white_king_position = {7,4};
+    sf::Vector2i black_king_position = {0,4};
 private:
     
     sf::RectangleShape board;

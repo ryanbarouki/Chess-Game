@@ -49,13 +49,15 @@ void Game::Loop(){
                                 sf::Vector2f p = board->getPiece(I, J)->piece.getPosition();
                                 //snaps to grid
                                 newPos = sf::Vector2f(size*int(p.x/size) + size/2, size*int(p.y/size) + size/2);
-                                if(board->getPiece(I, J)->canMoveTo(I,J,*board) && newPos != oldPos){
+                                int new_row = int(newPos.y/size);
+                                int new_col = int(newPos.x/size);
+                                
+                                // is the move valid and will it put you in check?
+                                if(board->getPiece(I, J)->canMoveTo(I,J, new_row, new_col, *board) && newPos != oldPos && !board->getPiece(I, J)->wouldMoveCauseCheck(I,J, new_row, new_col, *board)){
                                     //takes care of who's turn it is.
                                     if((board->getPiece(I, J)->getColour() == 'w' && turn % 2 == 0) || (board->getPiece(I, J)->getColour() == 'b' && turn % 2 == 1)){
                                         turn++;
                                         board->getPiece(I, J)->piece.setPosition(newPos);
-                                        int new_row = int(newPos.y/size);
-                                        int new_col = int(newPos.x/size);
                                         board->updateBoard(I, J, new_row, new_col);
                                     } else board->getPiece(I, J)->piece.setPosition(oldPos);
                                 } else board->getPiece(I, J)->piece.setPosition(oldPos);

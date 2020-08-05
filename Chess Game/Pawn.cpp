@@ -6,13 +6,11 @@ Pawn::Pawn(sf::Vector2f original_position, int rect_x, int rect_y, char clr): Pi
 
     piece.setPosition(original_position);
     piece.setTextureRect(sf::IntRect(rect_x*size,rect_y*size,size,size));
-    
+    type = "pawn";
 }
 
-bool Pawn::canMoveTo(int row, int col, Board &board){
+bool Pawn::canMoveTo(int row, int col, int row_final, int col_final, Board &board){
     bool valid = false;
-    int col_final = int((piece.getPosition().x)/size);
-    int row_final = int((piece.getPosition().y)/size);
     //woop
     
     // validation code here
